@@ -2,26 +2,28 @@ import React, { Component } from 'react';
 import './App.css';
 import {Route} from 'react-router-dom';
 import NavWrapper from './NavWrapper/NavWrapper';
-import Mac from './Pages/Mac';
-import Ipad from './Pages/Ipad';
-import Iphone from './Pages/Iphone';
-import Watch from './Pages/Watch';
-import TV from './Pages/TV';
-import Music from './Pages/Music';
-import Support from './Pages/Support';
+import MacNavbar from './Pages/Mac';
+import IpadNavbar from './Pages/Ipad';
+import IphoneNavbar from './Pages/Iphone';
+import WatchNavbar from './Pages/Watch';
+import TVNavbar from './Pages/TV';
+import MusicNavbar from './Pages/Music';
+import SupportNavbar from './Pages/Support';
+import MacPage from './Pages/MacPage';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Route exact path="/" component={NavWrapper} />
-        <Route path="/mac" component={Mac} />
-        <Route path="/ipad" component={Ipad} />
-        <Route path="/iphone" component={Iphone} />
-        <Route path="/watch" component={Watch} />
-        <Route path="/tv" component={TV} />
-        <Route path="/music" component={Music} />
-        <Route path="/support" component={Support} />
+        <Route path="/mac" component={MacNavbar} />
+        <Route path="/ipad" component={IpadNavbar} />
+        <Route path="/iphone" component={IphoneNavbar} />
+        <Route path="/watch" component={WatchNavbar} />
+        <Route path="/tv" component={TVNavbar} />
+        <Route path="/music" component={MusicNavbar} />
+        <Route path="/support" component={SupportNavbar} />
+        <Route path="/mac/macbook" component={MacPage}/>
       </div>
     );
   }
